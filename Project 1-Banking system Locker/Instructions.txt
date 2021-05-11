@@ -1,0 +1,10 @@
+In this project, we created a locker opening system of Bank locker, which consists of the following things :
+
+1. We connected Keypad and Motor Driver IC to Raspberry Pi.
+2. Dc Motor is then connected to Motor Driver IC which opens and closes the door based on commands.
+3. The password entered in the keypad is then matched to the password stored in the server.
+4. If the password is correct then the motor starts and opens the door.
+5. If incorrect, it will show the wrong password and the motor will not start.
+
+
+Note: We are using Thingspeak server to check the correct password
