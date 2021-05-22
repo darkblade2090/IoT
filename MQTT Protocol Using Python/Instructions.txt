@@ -1,0 +1,63 @@
+=================================================================
+MQTT is a publish/subscribe protocol that is lightweight and requires a minimal footprint and bandwidth to connect an IoT device. 
+Unlike HTTP’s request/response paradigm, MQTT is event driven and enables messages to be pushed to clients. This type of 
+architecture decouples the clients from each other to enable a highly scalable solution without dependencies between data 
+producers and data consumers.
+
+The key benefits of MQTT are:
+
+1.Lightweight and efficient to minimize resources required for the client and network bandwidth.
+2.Enables bidirectional communication between devices and servers. Also, enabling broadcasting messages to groups of things.
+3.Scales to millions of things.
+4.Specifies Quality of Service (QoS) levels to support message reliability.
+5.Supports persistent sessions between device and server that reduces reconnection time required over unreliable networks.
+6.Messages can be encrypted with TLS and support client authentication protocols.
+
+MQTT Clients:
+There are many open source clients available in a wide range of programming languages. HiveMQ offers the HiveMQ MQTT Client that is developed in Java. 
+Eclipse Paho also offers C/C++, Python and a variety of other implementations. A detailed list of clients can be found at mqtt.org.
+
+MQTT Brokers:
+MQTT brokers are offered in open source, commercial implementations and managed cloud services. HiveMQ offers two commercial editions: HiveMQ Professional and HiveMQ Enterprise, 
+a managed cloud MQTT service: HiveMQ Cloud, and an open source version: HiveMQ Community Edition. A detailed list of brokers can be found at mqtt.org.
+==================================================================
+
+MQTT Broker : broker.emqx.io , test.mosquitto.com, localhost, 
+		"mqtt.eclipse.org"
+
+MQTT Client : paho-mqtt
+
+pub_program.py > mqtt_broker > sub_program.py
+
+==================================================To install mqtt broker(Mosquito) in PC
+
+local mqtt broker : mosquitto
+install mqtt broker > https://mosquitto.org/download/
+
+Open cmd with administrator
+>Go to mosquitto driectory
+>net start mosquitto
+>mosquitto 
+>mosquitto_sub -t 'my_topic'
+
+Open new cmd window with administrator
+>Go to mosquitto driectory
+>mosquitto_pub -t 'my_topic' -m "Hello"
+
+
+====================================================To install mqtt client(mosquito) in Raspberry Pi
+sudo apt-get install mosquitto
+sudo apt-get install mosquitto-clients
+enable mosquitto  : sudo systemctl enable mosquitto
+chact status : sudo systemctl status mosquitto
+
+
+
+
+
+
+
+
+
+
+
