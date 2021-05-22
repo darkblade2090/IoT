@@ -1,0 +1,38 @@
+Introdution:
+
+There are definite rules laid out by authorities about driving cars on roads. The most common rule in any country is speed limit in certain roads i.e. you will be in violation of the law if your car speed exceeds this limit.
+
+In order to detect the speed of a moving car, the patrolling officers usually depend on a handheld gun that works on Radar Technology or Lidar Technology. This is a tedious process as the officer has to manually check for over speeding for each vehicle.
+
+What if the Car Speed Detection is made automatic? A simple automatic detection of speed of a vehicle is designed in Arduino Car Speed Detector project, where you can place the system in one place and view the results instantly without any human intervention.
+
+===================================================================================================================================================================================================================================================================
+
+Principle of the Project:
+
+IR Sensors are the main part of the project that detect the speed of a car. Practically, you can implement the setup of IR Sensors in many ways but in this project, I have used two reflective type IR Sensors and placed them 10cm apart.
+
+When a car travelling reaches the first sensor, the IR Sensor gets activated. From this moment onward, a timer is initiated and will continue to keep time until the car reaches the second IR Sensor.
+
+By simulating the distance between the two sensors to be 5 meters, you can calculate the speed at which the car travelled from IR Sensor 1 to IR Sensor 2 as you already know the time of travel.
+
+All the calculations and data gathering are done by Raspberry PI and the final result is displayed on the screen.
+
+==============================================================================================================================================================================================================================================================================
+
+Components Required:
+
+Raspberyy PI
+IR Sensors x 2
+Monitor
+Breadboard
+Connecting Wires
+Power Supply
+
+=============================================================================================================================================================================================
+
+Working:
+
+The working of the Raspberry Pi based car speed detector project is very simple. 
+Rasp continuously reads the inputs from the IR Sensors. 
+When a car moving in front of the setup reaches the first sensor, it becomes alert and capture a time stamp the moment the car leaves the first IR Sensor.
