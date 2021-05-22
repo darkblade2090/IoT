@@ -1,0 +1,55 @@
+-  SMTP stands for Simple Mail Transfer Protocol.
+
+-  SMTP is a set of communication guidelines that allow software to transmit an electronic mail over the internet is called Simple Mail Transfer Protocol.
+
+-  It is a program used for sending messages to other computer users based on e-mail addresses.
+
+-  It provides a mail exchange between users on the same or different computers, and it also supports:
+   1.  It can send a single message to one or more recipients.
+   2.  Sending message can include text, voice, video or graphics.
+   3.  It can also send the messages on networks outside the internet.
+
+-  The main purpose of SMTP is used to set up communication rules between servers. The servers have a way of identifying themselves and announcing what kind of 
+   communication they are trying to perform. They also have a way of handling the errors such as incorrect email address. For example, if the recipient address is wrong, 
+   then receiving server reply with an error message of some kind.
+
+=======================================================================================================================================================================
+Working of SMTP:
+
+1. Composition of Mail: A user sends an e-mail by composing an electronic mail message using a Mail User Agent (MUA). Mail User Agent is a program which is used to send and receive mail. The message contains two parts: 
+   body and header. The body is the main part of the message while the header includes information such as the sender and recipient address. The header also includes descriptive information such as the subject of the message. 
+   In this case, the message body is like a letter and header is like an envelope that contains the recipient's address.
+
+2. Submission of Mail: After composing an email, the mail client then submits the completed e-mail to the SMTP server by using SMTP on TCP port 25.
+
+3. Delivery of Mail: E-mail addresses contain two parts: username of the recipient and domain name. For example, vivek@gmail.com, where "vivek" is the username of the recipient and "gmail.com" is the domain name.
+
+4. If the domain name of the recipient's email address is different from the sender's domain name, then MSA will send the mail to the Mail Transfer Agent (MTA). To relay the email, the MTA will find the target domain. 
+   It checks the MX record from Domain Name System to obtain the target domain. The MX record contains the domain name and IP address of the recipient's domain. Once the record is located, MTA connects to the exchange 
+   server to relay the message.
+
+5. Receipt and Processing of Mail: Once the incoming message is received, the exchange server delivers it to the incoming server (Mail Delivery Agent) which stores the e-mail where it waits for the user to retrieve it.
+
+6. Access and Retrieval of Mail: The stored email in MDA can be retrieved by using MUA (Mail User Agent). MUA can be accessed by using login and password.
+
+===========================================================================================================================================================================
+
+Communication between sender and the receiver : 
+The senders, user agent prepare the message and send it to the MTA. The MTA functioning is to transfer the mail across the network to the receivers MTA. To send mail, a system must have the client MTA,
+and to receive mail, a system must have a server MTA. 
+
+SENDING EMAIL: 
+Mail is sent by a series of request and response messages between the client and a server. The message which is sent across consists of a header and the body. 
+A null line is used to terminate the mail header. Everything which is after the null line is considered as the body of the message which is a sequence of ASCII characters. 
+The message body contains the actual information read by the receipt. 
+
+RECEIVING EMAIL: 
+The user agent at the server-side checks the mailboxes at a particular time of intervals. If any information is received it informs the user about the mail. 
+When the user tries to read the mail it displays a list of mails with a short description of each mail in the mailbox. By selecting any of the mail user can view its contents on the terminal.
+
+Some SMTP Commands:
+
+HELO – Identifies the client to the server, fully qualified domain name, only sent once per session
+MAIL – Initiate a message transfer, fully qualified domain of originator
+RCPT – Follows MAIL, identifies an addressee, typically the fully qualified name of the addressee and for multiple addressees use one RCPT for each addressee
+DATA – send data line by line
