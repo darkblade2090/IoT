@@ -13,9 +13,9 @@ def send_mail(myemail, password, sendto,subject, msg):
     print("Email Sent")
     mailserver.quit()
 
-myemail = 'tech3zone139@gmail.com'
-password= 'Titanium@7456'
-sendto  = 'certificate1.softpro@gmail.com'
+myemail = ''
+password= '6'
+sendto  = ''
 msg = "Hello,\r\nObject Detected!!!"
 subject = "Alert from Raspberry Pi"
 from RPi import GPIO
