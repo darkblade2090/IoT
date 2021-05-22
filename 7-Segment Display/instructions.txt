@@ -11,3 +11,31 @@ Step 4:- Connect the 7-segment display pins according to the below data
             ssd_pins = [31, 33, 35, 37, 40, 38, 36]
 
 Step 5:- Run the program
+
+
+=======================to print data (ASCII value)
+set data mode (rs = 1)
+set write mode (rw = 0)
+set acsii data at data pins (data_pins = ASCII of character)
+
+set clock pin high (en = 1)
+wait for delay (10ms )
+set clock low (en = 0)
+
+========================to execute commands
+set command mode (rs = 0)
+set write mode (rw = 0)
+set command at data pins (data_pins = lcd commands)
+
+set clock pin high (en = 1)
+wait for delay (10ms )
+set clock low (en = 0)
+
+===============================lcd commands
+Initalization Commands-
+		= 0x0C : lcd enable
+		= 0x01 : lcd clear 
+		= 0X38 : lcd 2 line mode
+Positional Commands- 
+		= 0x80 : 1st line 1st position
+		= 0xc0 : 3rd line 1st position
