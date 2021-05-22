@@ -1,0 +1,7 @@
+We are doing 2 tasks here:
+
+1. Reading data from thingspeak server.
+2. Writing/Uploading data to thingspeak server.
+
+Note:  In Thingspeak server, we can have access to 7 different fieldsin a single channel and we can have 
+       4 different channels in Thingspeak free account.
